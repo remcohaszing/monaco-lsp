@@ -49,7 +49,7 @@ types.
   - [`fromPosition(position)`](#frompositionposition)
   - [`fromRange(range)`](#fromrangerange)
   - [`fromRelatedInformation(relatedInformation)`](#fromrelatedinformationrelatedinformation)
-  - [`fromSelectionRanges(selectionRange)`](#fromselectionrangesselectionrange)
+  - [`fromSelectionRanges(selectionRanges)`](#fromselectionrangesselectionranges)
   - [`fromSemanticTokens(semanticTokens)`](#fromsemantictokenssemantictokens)
   - [`fromSemanticTokensEdit(semanticTokensEdit)`](#fromsemantictokenseditsemantictokensedit)
   - [`fromSemanticTokensEdits(semanticTokensEdits)`](#fromsemantictokenseditssemantictokensedits)
@@ -159,11 +159,11 @@ console.log(toRange(lsRange))
 
 Convert a Monaco editor code action to an LSP code action.
 
-#### Parameters
+###### Parameters
 
 - `codeAction` (`monaco.languages.CodeAction`) — the Monaco code action to convert
 
-#### Returns
+###### Returns
 
 The code action as an LSP code action (`lsp.CodeAction`).
 
@@ -171,12 +171,12 @@ The code action as an LSP code action (`lsp.CodeAction`).
 
 Convert a Monaco editor code action context to an LSP code action context.
 
-#### Parameters
+###### Parameters
 
 - `codeActionContext` (`monaco.languages.CodeActionContext`) — the Monaco code action context to
   convert
 
-#### Returns
+###### Returns
 
 The code action context as an LSP code action context (`lsp.CodeActionContext`).
 
@@ -184,23 +184,23 @@ The code action context as an LSP code action context (`lsp.CodeActionContext`).
 
 Convert a Monaco editor code action trigger type to an LSP completion item kind.
 
-#### Parameters
+###### Parameters
 
 - `type` (`monaco.languages.CodeActionTriggerType`) — the Monaco code action trigger type to convert
 
-#### Returns
+###### Returns
 
-The code action trigger type as an LSP completion item kind (`lsp.CodeActionTriggerKind`).
+The code action trigger type as an LSP completion item kind (`1 | 2`).
 
 ### `fromCodeLens(codeLens)`
 
 Convert a Monaco editor code lens to an LSP code lens.
 
-#### Parameters
+###### Parameters
 
 - `codeLens` (`monaco.languages.CodeLens`) — the Monaco code lens to convert
 
-#### Returns
+###### Returns
 
 The code lens as an LSP code lens (`lsp.CodeLens`).
 
@@ -208,11 +208,11 @@ The code lens as an LSP code lens (`lsp.CodeLens`).
 
 Convert a Monaco editor color to an LSP color.
 
-#### Parameters
+###### Parameters
 
 - `color` (`monaco.languages.IColor`) — the Monaco color to convert
 
-#### Returns
+###### Returns
 
 The color as an LSP color (`lsp.Color`).
 
@@ -220,12 +220,12 @@ The color as an LSP color (`lsp.Color`).
 
 Convert a Monaco editor color information to an LSP color information.
 
-#### Parameters
+###### Parameters
 
 - `colorInformation` (`monaco.languages.IColorInformation`) — the Monaco color information to
   convert
 
-#### Returns
+###### Returns
 
 The color information as an LSP color information (`lsp.ColorInformation`).
 
@@ -233,12 +233,12 @@ The color information as an LSP color information (`lsp.ColorInformation`).
 
 Convert a Monaco editor color presentation to an LSP color presentation.
 
-#### Parameters
+###### Parameters
 
 - `colorPresentation` (`monaco.languages.IColorPresentation`) — the Monaco color presentation to
   convert
 
-#### Returns
+###### Returns
 
 The color presentation as an LSP color presentation (`lsp.ColorPresentation`).
 
@@ -246,11 +246,11 @@ The color presentation as an LSP color presentation (`lsp.ColorPresentation`).
 
 Convert a Monaco editor command to an LSP command.
 
-#### Parameters
+###### Parameters
 
 - `command` (`monaco.languages.Command`) — the Monaco command to convert
 
-#### Returns
+###### Returns
 
 The command as an LSP command (`lsp.Command`).
 
@@ -258,12 +258,12 @@ The command as an LSP command (`lsp.Command`).
 
 Convert a Monaco editor completion context to an LSP completion context.
 
-#### Parameters
+###### Parameters
 
 - `completionContext` (`monaco.languages.CompletionContext`) — the Monaco completion context to
   convert
 
-#### Returns
+###### Returns
 
 The completion context as an LSP completion context (`lsp.CompletionContext`).
 
@@ -271,11 +271,11 @@ The completion context as an LSP completion context (`lsp.CompletionContext`).
 
 Convert a Monaco editor completion item to an LSP completion item.
 
-#### Parameters
+###### Parameters
 
 - `completionItem` (`monaco.languages.CompletionItem`) — the Monaco completion item to convert
 
-#### Returns
+###### Returns
 
 The completion item as an LSP completion item (`lsp.CompletionItem`).
 
@@ -283,11 +283,11 @@ The completion item as an LSP completion item (`lsp.CompletionItem`).
 
 Convert a Monaco editor completion item kind to an LSP completion item kind.
 
-#### Parameters
+###### Parameters
 
 - `kind` (`monaco.languages.CompletionItemKind`) — the Monaco completion item kind to convert
 
-#### Returns
+###### Returns
 
 The completion item kind as an LSP completion item kind (`lsp.CompletionItemKind | undefined`).
 
@@ -295,23 +295,23 @@ The completion item kind as an LSP completion item kind (`lsp.CompletionItemKind
 
 Convert a Monaco editor completion item tag to an LSP completion item tag.
 
-#### Parameters
+###### Parameters
 
 - `tag` (`monaco.languages.CompletionItemTag`) — the Monaco completion item tag to convert
 
-#### Returns
+###### Returns
 
-The completion item tag as an LSP completion item tag (`lsp.CompletionItemTag`).
+The completion item tag as an LSP completion item tag (`1`).
 
 ### `fromCompletionList(completionList)`
 
 Convert a Monaco editor completion list to an LSP completion list.
 
-#### Parameters
+###### Parameters
 
 - `completionList` (`monaco.languages.CompletionList`) — the Monaco completion list to convert
 
-#### Returns
+###### Returns
 
 The completion list as an LSP completion list (`lsp.CompletionList`).
 
@@ -319,36 +319,38 @@ The completion list as an LSP completion list (`lsp.CompletionList`).
 
 Convert a Monaco editor completion trigger kind to an LSP completion trigger kind.
 
-#### Parameters
+###### Parameters
 
 - `kind` (`monaco.languages.CompletionTriggerKind`) — the Monaco completion trigger kind to convert
 
-#### Returns
+###### Returns
 
-The completion trigger kind as an LSP completion trigger kind (`lsp.CompletionTriggerKind`).
+The completion trigger kind as an LSP completion trigger kind (`1 | 2 | 3`).
 
 ### `fromDefinition(definition)`
 
 Convert a Monaco editor definition to an LSP definition.
 
-#### Parameters
+###### Parameters
 
-- `definition` (`monaco.languages.Definition`) — the Monaco definition to convert
+- `definition`
+  (`  | monaco.languages.Location   | Array<monaco.languages.Location>   | Array<monaco.languages.LocationLink>`)
+  — the Monaco definition to convert
 
-#### Returns
+###### Returns
 
-The definition as an LSP definition (`lsp.Definition`).
+The definition as an LSP definition (`lsp.Location | Array<lsp.Location>`).
 
 ### `fromDocumentHighlight(documentHighlight)`
 
 Convert a Monaco editor document highlight to an LSP document highlight.
 
-#### Parameters
+###### Parameters
 
 - `documentHighlight` (`monaco.languages.DocumentHighlight`) — the Monaco document highlight to
   convert
 
-#### Returns
+###### Returns
 
 The document highlight as an LSP document highlight (`lsp.DocumentHighlight`).
 
@@ -356,23 +358,23 @@ The document highlight as an LSP document highlight (`lsp.DocumentHighlight`).
 
 Convert a Monaco editor document highlight kind to an LSP document highlight kind.
 
-#### Parameters
+###### Parameters
 
 - `kind` (`monaco.languages.DocumentHighlightKind`) — the Monaco document highlight kind to convert
 
-#### Returns
+###### Returns
 
-The document highlight kind as an LSP document highlight kind (`lsp.DocumentHighlightKind`).
+The document highlight kind as an LSP document highlight kind (`1 | 2 | 3`).
 
 ### `fromDocumentSymbol(documentSymbol)`
 
 Convert a Monaco editor document symbol to an LSP document symbol.
 
-#### Parameters
+###### Parameters
 
 - `documentSymbol` (`monaco.languages.DocumentSymbol`) — the Monaco document symbol to convert
 
-#### Returns
+###### Returns
 
 The document symbol as an LSP document symbol (`lsp.DocumentSymbol`).
 
@@ -380,11 +382,11 @@ The document symbol as an LSP document symbol (`lsp.DocumentSymbol`).
 
 Convert a Monaco editor folding range to an LSP folding range.
 
-#### Parameters
+###### Parameters
 
 - `foldingRange` (`monaco.languages.FoldingRange`) — the Monaco folding range to convert
 
-#### Returns
+###### Returns
 
 The folding range as an LSP folding range (`lsp.FoldingRange`).
 
@@ -392,12 +394,12 @@ The folding range as an LSP folding range (`lsp.FoldingRange`).
 
 Convert a Monaco editor formatting options to an LSP formatting options.
 
-#### Parameters
+###### Parameters
 
 - `formattingOptions` (`monaco.languages.FormattingOptions`) — the Monaco formatting options to
   convert
 
-#### Returns
+###### Returns
 
 The formatting options as an LSP formatting options (`lsp.FormattingOptions`).
 
@@ -405,11 +407,11 @@ The formatting options as an LSP formatting options (`lsp.FormattingOptions`).
 
 Convert a Monaco editor hover to an LSP hover.
 
-#### Parameters
+###### Parameters
 
 - `hover` (`monaco.languages.Hover`) — the Monaco hover to convert
 
-#### Returns
+###### Returns
 
 The hover as an LSP hover (`lsp.Hover`).
 
@@ -417,48 +419,50 @@ The hover as an LSP hover (`lsp.Hover`).
 
 Convert a Monaco editor inlay hint to an LSP inlay hint.
 
-#### Parameters
+###### Parameters
 
 - `inlayHint` (`monaco.languages.InlayHint`) — the Monaco inlay hint to convert
 
-#### Returns
+###### Returns
 
-The inlay hint as an LSP inlay hint (`lsp.InlayHint`).
+The inlay hint as an LSP inlay hint
+(`{   position: lsp.Position   label: string | lsp.InlayHintLabelPart[]   kind?: lsp.InlayHintKind   textEdits?: lsp.TextEdit[]   tooltip?: string | lsp.MarkupContent   paddingLeft?: boolean   paddingRight?: boolean   data?: lsp.LSPAny }`).
 
 ### `fromInlayHintKind(inlayHintKind)`
 
 Convert a Monaco editor inlay hint kind to an LSP inlay hint kind.
 
-#### Parameters
+###### Parameters
 
 - `inlayHintKind` (`monaco.languages.InlayHintKind`) — the Monaco inlay hint kind to convert
 
-#### Returns
+###### Returns
 
-The inlay hint kind as an LSP inlay hint kind (`lsp.InlayHintKind`).
+The inlay hint kind as an LSP inlay hint kind (`1 | 2`).
 
 ### `fromInlayHintLabelPart(inlayHintLabelPart)`
 
 Convert a Monaco editor inlay hint label part to an LSP inlay hint label part.
 
-#### Parameters
+###### Parameters
 
 - `inlayHintLabelPart` (`monaco.languages.InlayHintLabelPart`) — the Monaco inlay hint label part to
   convert
 
-#### Returns
+###### Returns
 
-The inlay hint label part as an LSP inlay hint label part (`lsp.InlayHintPart`).
+The inlay hint label part as an LSP inlay hint label part
+(`{   value: string   tooltip?: string | lsp.MarkupContent   location?: lsp.Location   command?: lsp.Command }`).
 
 ### `fromLink(link)`
 
 Convert a Monaco editor link to an LSP document link.
 
-#### Parameters
+###### Parameters
 
 - `link` (`monaco.languages.ILink`) — the Monaco link to convert
 
-#### Returns
+###### Returns
 
 The link as an LSP document link (`lsp.DocumentLink`).
 
@@ -466,12 +470,12 @@ The link as an LSP document link (`lsp.DocumentLink`).
 
 Convert Monaco editor linked editing ranges to LSP linked editing ranges.
 
-#### Parameters
+###### Parameters
 
 - `linkedEditingRanges` (`monaco.languages.LinkedEditingRanges`) — the Monaco linked editing ranges
   to convert
 
-#### Returns
+###### Returns
 
 The linked editing ranges as LSP linked editing ranges (`lsp.LinkedEditingRanges`).
 
@@ -479,11 +483,11 @@ The linked editing ranges as LSP linked editing ranges (`lsp.LinkedEditingRanges
 
 Convert a Monaco editor location to an LSP location.
 
-#### Parameters
+###### Parameters
 
 - `location` (`monaco.languages.Location`) — the Monaco location to convert
 
-#### Returns
+###### Returns
 
 The location as an LSP location (`lsp.Location`).
 
@@ -491,11 +495,11 @@ The location as an LSP location (`lsp.Location`).
 
 Convert a Monaco editor location link to an LSP location link.
 
-#### Parameters
+###### Parameters
 
 - `locationLink` (`monaco.languages.LocationLink`) — the Monaco location link to convert
 
-#### Returns
+###### Returns
 
 The location link as an LSP location link (`lsp.LocationLink`).
 
@@ -503,11 +507,11 @@ The location link as an LSP location link (`lsp.LocationLink`).
 
 Convert a Monaco editor markdown string to an LSP markup content.
 
-#### Parameters
+###### Parameters
 
 - `markdownString` (`monaco.IMarkdownString`) — the Monaco markdown string to convert
 
-#### Returns
+###### Returns
 
 The markdown string as an LSP markup content (`lsp.MarkupContent`).
 
@@ -515,11 +519,11 @@ The markdown string as an LSP markup content (`lsp.MarkupContent`).
 
 Convert a Monaco editor marker data to an LSP diagnostic.
 
-#### Parameters
+###### Parameters
 
 - `markerData` (`monaco.editor.IMarkerData`) — the Monaco marker data to convert
 
-#### Returns
+###### Returns
 
 The marker data as an LSP diagnostic (`lsp.Diagnostic`).
 
@@ -527,36 +531,36 @@ The marker data as an LSP diagnostic (`lsp.Diagnostic`).
 
 Convert a Monaco editor marker severity to an LSP diagnostic severity.
 
-#### Parameters
+###### Parameters
 
 - `severity` (`monaco.MarkerSeverity`) — the Monaco marker severity to convert
 
-#### Returns
+###### Returns
 
-The marker severity as an LSP diagnostic severity (`lsp.DiagnosticSeverity`).
+The marker severity as an LSP diagnostic severity (`1 | 2 | 3 | 4`).
 
 ### `fromMarkerTag(tag)`
 
 Convert a Monaco editor marker tag to an LSP diagnostic tag.
 
-#### Parameters
+###### Parameters
 
 - `tag` (`monaco.MarkerTag`) — the Monaco marker tag to convert
 
-#### Returns
+###### Returns
 
-The marker tag as an LSP diagnostic tag (`lsp.DiagnosticTag`).
+The marker tag as an LSP diagnostic tag (`1 | 2`).
 
 ### `fromParameterInformation(parameterInformation)`
 
 Convert a Monaco editor parameter information to an LSP parameter information.
 
-#### Parameters
+###### Parameters
 
 - `parameterInformation` (`monaco.languages.ParameterInformation`) — the Monaco parameter
   information to convert
 
-#### Returns
+###### Returns
 
 The parameter information as an LSP parameter information (`lsp.ParameterInformation`).
 
@@ -564,11 +568,11 @@ The parameter information as an LSP parameter information (`lsp.ParameterInforma
 
 Convert a Monaco editor position to an LSP range.
 
-#### Parameters
+###### Parameters
 
 - `position` (`monaco.IPosition`) — the Monaco position to convert
 
-#### Returns
+###### Returns
 
 The position as an LSP position (`lsp.Position`).
 
@@ -576,11 +580,11 @@ The position as an LSP position (`lsp.Position`).
 
 Convert a Monaco editor range to an LSP range.
 
-#### Parameters
+###### Parameters
 
 - `range` (`monaco.IRange`) — the Monaco range to convert
 
-#### Returns
+###### Returns
 
 The range as an LSP range (`lsp.Range`).
 
@@ -588,37 +592,38 @@ The range as an LSP range (`lsp.Range`).
 
 Convert a Monaco editor related information to an LSP diagnostic related information.
 
-#### Parameters
+###### Parameters
 
 - `relatedInformation` (`monaco.editor.IRelatedInformation`) — the Monaco related information to
   convert
 
-#### Returns
+###### Returns
 
 The related information as an LSP diagnostic related information
 (`lsp.DiagnosticRelatedInformation`).
 
-### `fromSelectionRanges(selectionRange)`
+### `fromSelectionRanges(selectionRanges)`
 
 Convert Monaco editor selection ranges to an LSP selection range.
 
-#### Parameters
+###### Parameters
 
-- `selectionRanges` (`monaco.languages.SelectionRange[]`) — the Monaco selection ranges to convert
+- `selectionRanges` (`Array<monaco.languages.SelectionRange>`) — the Monaco selections ranges to
+  convert
 
-#### Returns
+###### Returns
 
-The selection range as an LSP selection range (`lsp.SelectionRange`).
+The selection ranges as LSP selection range (`lsp.SelectionRange | undefined`).
 
 ### `fromSemanticTokens(semanticTokens)`
 
 Convert Monaco editor semantic tokens to LSP semantic tokens.
 
-#### Parameters
+###### Parameters
 
 - `semanticTokens` (`monaco.languages.SemanticTokens`) — the Monaco semantic tokens to convert
 
-#### Returns
+###### Returns
 
 The semantic tokens as LSP semantic tokens (`lsp.SemanticTokens`).
 
@@ -626,12 +631,12 @@ The semantic tokens as LSP semantic tokens (`lsp.SemanticTokens`).
 
 Convert Monaco editor semantic tokens to LSP semantic tokens.
 
-#### Parameters
+###### Parameters
 
 - `semanticTokensEdit` (`monaco.languages.SemanticTokensEdit`) — the Monaco semantic tokens to
   convert
 
-#### Returns
+###### Returns
 
 The semantic tokens as LSP semantic tokens (`lsp.SemanticTokensEdit`).
 
@@ -639,12 +644,12 @@ The semantic tokens as LSP semantic tokens (`lsp.SemanticTokensEdit`).
 
 Convert Monaco editsor semantic tokens edits to an LSP semantic tokens delta.
 
-#### Parameters
+###### Parameters
 
 - `semanticTokensEdits` (`monaco.languages.SemanticTokensEdits`) — the Monaco semantic tokens edits
   to convert
 
-#### Returns
+###### Returns
 
 The semantic tokens edits as an LSP semantic tokens delta (`lsp.SemanticTokensDelta`).
 
@@ -652,11 +657,11 @@ The semantic tokens edits as an LSP semantic tokens delta (`lsp.SemanticTokensDe
 
 Convert a Monaco editor signature help to an LSP signature help.
 
-#### Parameters
+###### Parameters
 
 - `signatureHelp` (`monaco.languages.SignatureHelp`) — the Monaco signature help to convert
 
-#### Returns
+###### Returns
 
 The signature help as an LSP signature help (`lsp.SignatureHelp`).
 
@@ -664,12 +669,12 @@ The signature help as an LSP signature help (`lsp.SignatureHelp`).
 
 Convert a Monaco editor signature help context to an LSP signature help context.
 
-#### Parameters
+###### Parameters
 
 - `signatureHelpContext` (`monaco.languages.SignatureHelpContext`) — the Monaco signature help
   context to convert
 
-#### Returns
+###### Returns
 
 The signature help context as an LSP signature help context (`lsp.SignatureHelpContext`).
 
@@ -677,26 +682,25 @@ The signature help context as an LSP signature help context (`lsp.SignatureHelpC
 
 Convert a Monaco editor signature help trigger kind to an LSP signature help trigger kind.
 
-#### Parameters
+###### Parameters
 
 - `signatureHelpTriggerKind` (`monaco.languages.SignatureHelpTriggerKind`) — the Monaco signature
   help trigger kind to convert
 
-#### Returns
+###### Returns
 
-The signature help trigger kind as an LSP signature help trigger kind
-(`lsp.SignatureHelpTriggerKind`).
+The signature help trigger kind as an LSP signature help trigger kind (`1 | 2 | 3`).
 
 ### `fromSignatureInformation(signatureInformation)`
 
 Convert a Monaco editor signature information to an LSP signature information.
 
-#### Parameters
+###### Parameters
 
 - `signatureInformation` (`monaco.languages.SignatureInformation`) — the Monaco signature
   information to convert
 
-#### Returns
+###### Returns
 
 The signature information as an LSP signature information (`lsp.SignatureInformation`).
 
@@ -704,12 +708,12 @@ The signature information as an LSP signature information (`lsp.SignatureInforma
 
 Convert a Monaco editor single edit operation to an LSP text edit.
 
-#### Parameters
+###### Parameters
 
 - `singleEditOperation` (`monaco.editor.ISingleEditOperation`) — the Monaco single edit operation to
   convert
 
-#### Returns
+###### Returns
 
 The single edit operation as an LSP text edit (`lsp.TextEdit`).
 
@@ -717,35 +721,36 @@ The single edit operation as an LSP text edit (`lsp.TextEdit`).
 
 Convert a Monaco editor symbol kind to an LSP symbol kind.
 
-#### Parameters
+###### Parameters
 
 - `symbolKind` (`monaco.languages.SymbolKind`) — the Monaco symbol kind to convert
 
-#### Returns
+###### Returns
 
-The symbol kind as an LSP symbol kind (`lsp.SymbolKind`).
+The symbol kind as an LSP symbol kind
+(`  | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10   | 11   | 12   | 13   | 14   | 15   | 16   | 17   | 18   | 19   | 20   | 21   | 22   | 23   | 24   | 25   | 26`).
 
 ### `fromSymbolTag(symbolTag)`
 
 Convert a Monaco editor symbol tag to an LSP symbol tag.
 
-#### Parameters
+###### Parameters
 
 - `symbolTag` (`monaco.languages.SymbolTag`) — the Monaco symbol tag to convert
 
-#### Returns
+###### Returns
 
-The symbol tag as an LSP symbol tag (`lsp.SymbolTag`).
+The symbol tag as an LSP symbol tag (`1`).
 
 ### `fromTextEdit(textEdit)`
 
 Convert a Monaco editor text edit to an LSP text edit.
 
-#### Parameters
+###### Parameters
 
 - `textEdit` (`monaco.languages.TextEdit`) — the Monaco text edit to convert
 
-#### Returns
+###### Returns
 
 The text edit as an LSP text edit (`lsp.TextEdit`).
 
@@ -753,11 +758,11 @@ The text edit as an LSP text edit (`lsp.TextEdit`).
 
 Convert a Monaco editor workspace edit to an LSP workspace edit.
 
-#### Parameters
+###### Parameters
 
 - `workspaceEdit` (`monaco.languages.WorkspaceEdit`) — the Monaco workspace edit to convert
 
-#### Returns
+###### Returns
 
 The workspace edit as an LSP workspace edit (`lsp.WorkspaceEdit`).
 
@@ -765,12 +770,12 @@ The workspace edit as an LSP workspace edit (`lsp.WorkspaceEdit`).
 
 Convert Monaco editor workspace file edit options to LSP workspace file edit options.
 
-#### Parameters
+###### Parameters
 
 - `workspaceFileEdit` (`monaco.languages.IWorkspaceFileEdit`) — the Monaco workspace file edit
   options to convert
 
-#### Returns
+###### Returns
 
 The range as LSP workspace file edit options (`lsp.CreateFile | lsp.DeleteFile | lsp.RenameFile`).
 
@@ -778,12 +783,12 @@ The range as LSP workspace file edit options (`lsp.CreateFile | lsp.DeleteFile |
 
 Convert Monaco editor workspace file edit options to LSP workspace file edit options.
 
-#### Parameters
+###### Parameters
 
 - `options` (`monaco.languages.WorkspaceFileEditOptions`) — the Monaco workspace file edit options
   to convert
 
-#### Returns
+###### Returns
 
 The range as LSP workspace file edit options
 (`lsp.CreateFileOptions & lsp.DeleteFileOptions & lsp.RenameFileOptions`).
@@ -792,11 +797,11 @@ The range as LSP workspace file edit options
 
 Convert an LSP code action to a Monaco editor code action.
 
-#### Parameters
+###### Parameters
 
 - `codeAction` (`lsp.CodeAction`) — the LSP code action to convert
 
-#### Returns
+###### Returns
 
 The code action as Monaco editor code action (`monaco.languages.CodeAction`).
 
@@ -804,11 +809,11 @@ The code action as Monaco editor code action (`monaco.languages.CodeAction`).
 
 Convert an LSP code action context to a Monaco editor code action context.
 
-#### Parameters
+###### Parameters
 
 - `codeActionContext` (`lsp.CodeActionContext`) — the LSP code action context to convert
 
-#### Returns
+###### Returns
 
 The code action context as Monaco editor code action context (`monaco.languages.CodeActionContext`).
 
@@ -816,11 +821,11 @@ The code action context as Monaco editor code action context (`monaco.languages.
 
 Convert an LSP completion item kind to a Monaco editor code action trigger type.
 
-#### Parameters
+###### Parameters
 
-- `kind` (`lsp.CodeActionTriggerType`) — the LSP completion item kind to convert
+- `kind` (`1 | 2`) — the LSP completion item kind to convert
 
-#### Returns
+###### Returns
 
 The completion item kind as Monaco editor code action trigger type
 (`monaco.languages.CodeActionTriggerType`).
@@ -829,11 +834,11 @@ The completion item kind as Monaco editor code action trigger type
 
 Convert an LSP code lens to a Monaco editor code lens.
 
-#### Parameters
+###### Parameters
 
 - `codeLens` (`lsp.CodeLens`) — the LSP code lens to convert
 
-#### Returns
+###### Returns
 
 The code lens as Monaco editor code lens (`monaco.languages.CodeLens`).
 
@@ -841,11 +846,11 @@ The code lens as Monaco editor code lens (`monaco.languages.CodeLens`).
 
 Convert an LSP color to a Monaco editor color.
 
-#### Parameters
+###### Parameters
 
 - `color` (`lsp.Color`) — the LSP color to convert
 
-#### Returns
+###### Returns
 
 The color as Monaco editor color (`monaco.languages.IColor`).
 
@@ -853,11 +858,11 @@ The color as Monaco editor color (`monaco.languages.IColor`).
 
 Convert an LSP color information to a Monaco editor color information.
 
-#### Parameters
+###### Parameters
 
 - `colorInformation` (`lsp.ColorInformation`) — the LSP color information to convert
 
-#### Returns
+###### Returns
 
 The color information as Monaco editor color information (`monaco.languages.IColorInformation`).
 
@@ -865,11 +870,11 @@ The color information as Monaco editor color information (`monaco.languages.ICol
 
 Convert an LSP color presentation to a Monaco editor color presentation.
 
-#### Parameters
+###### Parameters
 
 - `colorPresentation` (`lsp.ColorPresentation`) — the LSP color presentation to convert
 
-#### Returns
+###### Returns
 
 The color presentation as Monaco editor color presentation (`monaco.languages.IColorPresentation`).
 
@@ -877,11 +882,11 @@ The color presentation as Monaco editor color presentation (`monaco.languages.IC
 
 Convert an LSP command to a Monaco editor command.
 
-#### Parameters
+###### Parameters
 
 - `command` (`lsp.Command`) — the LSP command to convert
 
-#### Returns
+###### Returns
 
 The command as Monaco editor command (`monaco.languages.Command`).
 
@@ -889,11 +894,11 @@ The command as Monaco editor command (`monaco.languages.Command`).
 
 Convert an LSP completion context to a Monaco editor completion context.
 
-#### Parameters
+###### Parameters
 
 - `completionContext` (`lsp.CompletionContext`) — the LSP completion context to convert
 
-#### Returns
+###### Returns
 
 The completion context as Monaco editor completion context (`monaco.languages.CompletionContext`).
 
@@ -901,13 +906,13 @@ The completion context as Monaco editor completion context (`monaco.languages.Co
 
 Convert an LSP completion item to a Monaco editor completion item.
 
-#### Parameters
+###### Parameters
 
 - `completionItem` (`lsp.CompletionItem`) — the LSP completion item to convert
 - `options` (`ToCompletionItemOptions`) — additional options needed to construct the Monaco
   completion item
 
-#### Returns
+###### Returns
 
 The completion item as Monaco editor completion item (`monaco.languages.CompletionItem`).
 
@@ -915,11 +920,13 @@ The completion item as Monaco editor completion item (`monaco.languages.Completi
 
 Convert an LSP completion item kind to a Monaco editor completion item kind.
 
-#### Parameters
+###### Parameters
 
-- `kind` (`lsp.CompletionItemKind`) — the LSP completion item kind to convert
+- `kind`
+  (`  | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10   | 11   | 12   | 13   | 14   | 15   | 16   | 17   | 18   | 19   | 20   | 21   | 22   | 23   | 24   | 25`)
+  — the LSP completion item kind to convert
 
-#### Returns
+###### Returns
 
 The completion item kind as Monaco editor completion item kind
 (`monaco.languages.CompletionItemKind`).
@@ -928,11 +935,11 @@ The completion item kind as Monaco editor completion item kind
 
 Convert an LSP completion item tag to a Monaco editor completion item tag.
 
-#### Parameters
+###### Parameters
 
-- `tag` (`lsp.CompletionItemTag`) — the LSP completion item tag to convert
+- `tag` (`1`) — the LSP completion item tag to convert
 
-#### Returns
+###### Returns
 
 The completion item tag as Monaco editor completion item tag (`monaco.languages.CompletionItemTag`).
 
@@ -940,13 +947,13 @@ The completion item tag as Monaco editor completion item tag (`monaco.languages.
 
 Convert an LSP completion list to a Monaco editor completion list.
 
-#### Parameters
+###### Parameters
 
 - `completionList` (`lsp.CompletionList`) — the LSP completion list to convert
 - `options` (`ToCompletionListOptions`) — additional options needed to construct the Monaco
   completion list
 
-#### Returns
+###### Returns
 
 The completion list as Monaco editor completion list (`monaco.languages.CompletionList`).
 
@@ -954,11 +961,11 @@ The completion list as Monaco editor completion list (`monaco.languages.Completi
 
 Convert an LSP completion trigger kind to a Monaco editor completion trigger kind.
 
-#### Parameters
+###### Parameters
 
-- `kind` (`lsp.CompletionTriggerKind`) — the LSP completion trigger kind to convert
+- `kind` (`1 | 2 | 3`) — the LSP completion trigger kind to convert
 
-#### Returns
+###### Returns
 
 The completion trigger kind as Monaco editor completion trigger kind
 (`monaco.languages.CompletionTriggerKind`).
@@ -967,23 +974,24 @@ The completion trigger kind as Monaco editor completion trigger kind
 
 Convert an LSP definition to a Monaco editor definition.
 
-#### Parameters
+###### Parameters
 
-- `definition` (`lsp.Definition`) — the LSP definition to convert
+- `definition` (`lsp.Location | Array<lsp.Location>`) — the LSP definition to convert
 
-#### Returns
+###### Returns
 
-The definition as Monaco editor definition (`monaco.languages.Definition`).
+The definition as Monaco editor definition
+(`  | monaco.languages.Location   | Array<monaco.languages.Location>   | Array<monaco.languages.LocationLink>`).
 
 ### `toDocumentHighlight(documentHighlight)`
 
 Convert an LSP document highlight to a Monaco editor document highlight.
 
-#### Parameters
+###### Parameters
 
 - `documentHighlight` (`lsp.DocumentHighlight`) — the LSP document highlight to convert
 
-#### Returns
+###### Returns
 
 The document highlight as Monaco editor document highlight (`monaco.languages.DocumentHighlight`).
 
@@ -991,11 +999,11 @@ The document highlight as Monaco editor document highlight (`monaco.languages.Do
 
 Convert an LSP document highlight kind to a Monaco editor document highlight kind.
 
-#### Parameters
+###### Parameters
 
-- `kind` (`lsp.DocumentHighlightKind`) — the LSP document highlight kind to convert
+- `kind` (`1 | 2 | 3`) — the LSP document highlight kind to convert
 
-#### Returns
+###### Returns
 
 The document highlight kind as Monaco editor document highlight kind
 (`monaco.languages.DocumentHighlightKind`).
@@ -1004,11 +1012,11 @@ The document highlight kind as Monaco editor document highlight kind
 
 Convert an LSP document symbol to a Monaco editor document symbol.
 
-#### Parameters
+###### Parameters
 
 - `documentSymbol` (`lsp.DocumentSymbol`) — the LSP document symbol to convert
 
-#### Returns
+###### Returns
 
 The document symbol as Monaco editor document symbol (`monaco.languages.DocumentSymbol`).
 
@@ -1016,11 +1024,11 @@ The document symbol as Monaco editor document symbol (`monaco.languages.Document
 
 Convert an LSP folding range to a Monaco editor folding range.
 
-#### Parameters
+###### Parameters
 
 - `foldingRange` (`lsp.FoldingRange`) — the LSP folding range to convert
 
-#### Returns
+###### Returns
 
 The folding range as Monaco editor folding range (`monaco.languages.FoldingRange`).
 
@@ -1028,11 +1036,11 @@ The folding range as Monaco editor folding range (`monaco.languages.FoldingRange
 
 Convert an LSP formatting options to a Monaco editor formatting options.
 
-#### Parameters
+###### Parameters
 
 - `formattingOptions` (`lsp.FormattingOptions`) — the LSP formatting options to convert
 
-#### Returns
+###### Returns
 
 The formatting options as Monaco editor formatting options (`monaco.languages.FormattingOptions`).
 
@@ -1040,11 +1048,11 @@ The formatting options as Monaco editor formatting options (`monaco.languages.Fo
 
 Convert an LSP hover to a Monaco editor hover.
 
-#### Parameters
+###### Parameters
 
 - `hover` (`lsp.Hover`) — the LSP hover to convert
 
-#### Returns
+###### Returns
 
 The hover as Monaco editor hover (`monaco.languages.Hover`).
 
@@ -1052,11 +1060,13 @@ The hover as Monaco editor hover (`monaco.languages.Hover`).
 
 Convert an LSP inlay hint to a Monaco editor inlay hint.
 
-#### Parameters
+###### Parameters
 
-- `inlayHint` (`lsp.InlayHint`) — the LSP inlay hint to convert
+- `inlayHint`
+  (`{   position: lsp.Position   label: string | lsp.InlayHintLabelPart[]   kind?: lsp.InlayHintKind   textEdits?: lsp.TextEdit[]   tooltip?: string | lsp.MarkupContent   paddingLeft?: boolean   paddingRight?: boolean   data?: lsp.LSPAny }`)
+  — the LSP inlay hint to convert
 
-#### Returns
+###### Returns
 
 The inlay hint as Monaco editor inlay hint (`monaco.languages.InlayHint`).
 
@@ -1064,11 +1074,11 @@ The inlay hint as Monaco editor inlay hint (`monaco.languages.InlayHint`).
 
 Convert an LSP inlay hint kind to a Monaco editor inlay hint kind.
 
-#### Parameters
+###### Parameters
 
-- `inlayHintKind` (`lsp.InlayHintKind`) — the LSP inlay hint kind to convert
+- `inlayHintKind` (`1 | 2`) — the LSP inlay hint kind to convert
 
-#### Returns
+###### Returns
 
 The inlay hint kind as Monaco editor inlay hint kind (`monaco.languages.InlayHintKind`).
 
@@ -1076,11 +1086,13 @@ The inlay hint kind as Monaco editor inlay hint kind (`monaco.languages.InlayHin
 
 Convert an LSP inlay hint label part to a Monaco editor inlay hint label part.
 
-#### Parameters
+###### Parameters
 
-- `inlayHintLabelPart` (`lsp.InlayHintLabelPart`) — the LSP inlay hint label part to convert
+- `inlayHintLabelPart`
+  (`{   value: string   tooltip?: string | lsp.MarkupContent   location?: lsp.Location   command?: lsp.Command }`)
+  — the LSP inlay hint label part to convert
 
-#### Returns
+###### Returns
 
 The inlay hint label part as Monaco editor inlay hint label part
 (`monaco.languages.InlayHintLabelPart`).
@@ -1089,11 +1101,11 @@ The inlay hint label part as Monaco editor inlay hint label part
 
 Convert an LSP document link to a Monaco editor link.
 
-#### Parameters
+###### Parameters
 
 - `documentLink` (`lsp.DocumentLink`) — the LSP document link to convert
 
-#### Returns
+###### Returns
 
 The document link as Monaco editor link (`monaco.languages.ILink`).
 
@@ -1101,11 +1113,11 @@ The document link as Monaco editor link (`monaco.languages.ILink`).
 
 Convert LSP linked editing ranges to Monaco editor linked editing ranges.
 
-#### Parameters
+###### Parameters
 
 - `linkedEditingRanges` (`lsp.LinkedEditingRanges`) — the LSP linked editing ranges to convert
 
-#### Returns
+###### Returns
 
 The linked editing ranges Monaco editor linked editing ranges
 (`monaco.languages.LinkedEditingRanges`).
@@ -1114,11 +1126,11 @@ The linked editing ranges Monaco editor linked editing ranges
 
 Convert an LSP location to a Monaco editor location.
 
-#### Parameters
+###### Parameters
 
 - `location` (`lsp.Location`) — the LSP location to convert
 
-#### Returns
+###### Returns
 
 The location as Monaco editor location (`monaco.languages.Location`).
 
@@ -1126,11 +1138,11 @@ The location as Monaco editor location (`monaco.languages.Location`).
 
 Convert an LSP location link to a Monaco editor location link.
 
-#### Parameters
+###### Parameters
 
 - `locationLink` (`lsp.LocationLink`) — the LSP location link to convert
 
-#### Returns
+###### Returns
 
 The location link as Monaco editor location link (`monaco.languages.LocationLink`).
 
@@ -1138,11 +1150,11 @@ The location link as Monaco editor location link (`monaco.languages.LocationLink
 
 Convert an LSP markup content to a Monaco editor markdown string.
 
-#### Parameters
+###### Parameters
 
 - `markupContent` (`lsp.MarkupContent`) — the LSP markup content to convert
 
-#### Returns
+###### Returns
 
 The markup content as a Monaco editor markdown string (`monaco.IMarkdownString`).
 
@@ -1150,11 +1162,11 @@ The markup content as a Monaco editor markdown string (`monaco.IMarkdownString`)
 
 Convert an LSP diagnostic to a Monaco editor marker data.
 
-#### Parameters
+###### Parameters
 
 - `diagnostic` (`lsp.Diagnostic`) — the LSP diagnostic to convert
 
-#### Returns
+###### Returns
 
 The diagnostic as Monaco editor marker data (`monaco.editor.IMarkerData`).
 
@@ -1162,11 +1174,11 @@ The diagnostic as Monaco editor marker data (`monaco.editor.IMarkerData`).
 
 Convert an LSP diagnostic severity to a Monaco editor marker severity.
 
-#### Parameters
+###### Parameters
 
-- `severity` (`lsp.DiagnosticSeverity`) — the LSP diagnostic severity to convert
+- `severity` (`1 | 2 | 3 | 4`) — the LSP diagnostic severity to convert
 
-#### Returns
+###### Returns
 
 The diagnostic severity as Monaco editor marker severity (`monaco.MarkerSeverity`).
 
@@ -1174,11 +1186,11 @@ The diagnostic severity as Monaco editor marker severity (`monaco.MarkerSeverity
 
 Convert an LSP diagnostic tag to a Monaco editor marker tag.
 
-#### Parameters
+###### Parameters
 
-- `tag` (`lsp.DiagnosticTag`) — the LSP diagnostic tag to convert
+- `tag` (`1 | 2`) — the LSP diagnostic tag to convert
 
-#### Returns
+###### Returns
 
 The diagnostic tag as Monaco editor marker tag (`monaco.MarkerTag`).
 
@@ -1186,11 +1198,11 @@ The diagnostic tag as Monaco editor marker tag (`monaco.MarkerTag`).
 
 Convert an LSP parameter information to a Monaco editor parameter information.
 
-#### Parameters
+###### Parameters
 
 - `parameterInformation` (`lsp.ParameterInformation`) — the LSP parameter information to convert
 
-#### Returns
+###### Returns
 
 The parameter information as Monaco editor parameter information
 (`monaco.languages.ParameterInformation`).
@@ -1199,11 +1211,11 @@ The parameter information as Monaco editor parameter information
 
 Convert an LSP position to a Monaco editor position.
 
-#### Parameters
+###### Parameters
 
 - `position` (`lsp.Position`) — the LSP position to convert
 
-#### Returns
+###### Returns
 
 The position as Monaco editor position (`monaco.IPosition`).
 
@@ -1211,11 +1223,11 @@ The position as Monaco editor position (`monaco.IPosition`).
 
 Convert an LSP range to a Monaco editor range.
 
-#### Parameters
+###### Parameters
 
 - `range` (`lsp.Range`) — the LSP range to convert
 
-#### Returns
+###### Returns
 
 The range as Monaco editor range (`monaco.IRange`).
 
@@ -1223,12 +1235,12 @@ The range as Monaco editor range (`monaco.IRange`).
 
 Convert an LSP diagnostic related information to a Monaco editor related information.
 
-#### Parameters
+###### Parameters
 
 - `relatedInformation` (`lsp.DiagnosticRelatedInformation`) — the LSP diagnostic related information
   to convert
 
-#### Returns
+###### Returns
 
 The diagnostic related information as Monaco editor related information
 (`monaco.editor.IRelatedInformation`).
@@ -1237,23 +1249,23 @@ The diagnostic related information as Monaco editor related information
 
 Convert an LSP selection range to Monaco editor selection ranges.
 
-#### Parameters
+###### Parameters
 
-- `selectionRange` (`lsp.SelectionRange`) — the LSP selection range to convert
+- `selectionRange` (`lsp.SelectionRange | undefined`) — the LSP selection range to convert
 
-#### Returns
+###### Returns
 
-The selection range as Monaco editor selection ranges (`monaco.languages.SelectionRange[]`).
+The selection range as Monaco editor selection ranges (`Array<monaco.languages.SelectionRange>`).
 
 ### `toSemanticTokens(semanticTokens)`
 
 Convert LSP semantic tokens to Monaco editor semantic tokens.
 
-#### Parameters
+###### Parameters
 
 - `semanticTokens` (`lsp.SemanticTokens`) — the LSP semantic tokens to convert
 
-#### Returns
+###### Returns
 
 The semantic tokens as Monaco editor semantic tokens (`monaco.languages.SemanticTokens`).
 
@@ -1261,11 +1273,11 @@ The semantic tokens as Monaco editor semantic tokens (`monaco.languages.Semantic
 
 Convert LSP semantic tokens to Monaco editor semantic tokens.
 
-#### Parameters
+###### Parameters
 
 - `semanticTokensEdit` (`lsp.SemanticTokensEdit`) — the LSP semantic tokens to convert
 
-#### Returns
+###### Returns
 
 The semantic tokens as Monaco editor semantic tokens (`monaco.languages.SemanticTokensEdit`).
 
@@ -1273,11 +1285,11 @@ The semantic tokens as Monaco editor semantic tokens (`monaco.languages.Semantic
 
 Convert an LSP semantic tokens delta to Monaco editsor semantic tokens edits.
 
-#### Parameters
+###### Parameters
 
 - `semanticTokensDelta` (`lsp.SemanticTokensDelta`) — the LSP semantic tokens delta to convert
 
-#### Returns
+###### Returns
 
 The semantic tokens delta as Monaco editsor semantic tokens edits
 (`monaco.languages.SemanticTokensEdits`).
@@ -1286,11 +1298,11 @@ The semantic tokens delta as Monaco editsor semantic tokens edits
 
 Convert an LSP signature help to a Monaco editor signature help.
 
-#### Parameters
+###### Parameters
 
 - `signatureHelp` (`lsp.SignatureHelp`) — the LSP signature help to convert
 
-#### Returns
+###### Returns
 
 The signature help as Monaco editor signature help (`monaco.languages.SignatureHelp`).
 
@@ -1298,11 +1310,11 @@ The signature help as Monaco editor signature help (`monaco.languages.SignatureH
 
 Convert an LSP signature help context to a Monaco editor signature help context.
 
-#### Parameters
+###### Parameters
 
 - `signatureHelpContext` (`lsp.SignatureHelpContext`) — the LSP signature help context to convert
 
-#### Returns
+###### Returns
 
 The signature help context as Monaco editor signature help context
 (`monaco.languages.SignatureHelpContext`).
@@ -1311,12 +1323,11 @@ The signature help context as Monaco editor signature help context
 
 Convert an LSP signature help trigger kind to a Monaco editor signature help trigger kind.
 
-#### Parameters
+###### Parameters
 
-- `signatureHelpTriggerKind` (`lsp.SignatureHelpTriggerKind`) — the LSP signature help trigger kind
-  to convert
+- `signatureHelpTriggerKind` (`1 | 2 | 3`) — the LSP signature help trigger kind to convert
 
-#### Returns
+###### Returns
 
 The signature help trigger kind as Monaco editor signature help trigger kind
 (`monaco.languages.SignatureHelpTriggerKind`).
@@ -1325,11 +1336,11 @@ The signature help trigger kind as Monaco editor signature help trigger kind
 
 Convert an LSP signature information to a Monaco editor signature information.
 
-#### Parameters
+###### Parameters
 
 - `signatureInformation` (`lsp.SignatureInformation`) — the LSP signature information to convert
 
-#### Returns
+###### Returns
 
 The signature information as Monaco editor signature information
 (`monaco.languages.SignatureInformation`).
@@ -1338,11 +1349,11 @@ The signature information as Monaco editor signature information
 
 Convert an LSP text edit to a Monaco editor single edit operation.
 
-#### Parameters
+###### Parameters
 
 - `textEdit` (`lsp.TextEdit`) — the LSP text edit to convert
 
-#### Returns
+###### Returns
 
 The text edit as Monaco editor single edit operation (`monaco.editor.ISingleEditOperation`).
 
@@ -1350,11 +1361,13 @@ The text edit as Monaco editor single edit operation (`monaco.editor.ISingleEdit
 
 Convert an LSP symbol kind to a Monaco editor symbol kind.
 
-#### Parameters
+###### Parameters
 
-- `symbolKind` (`lsp.SymbolKind`) — the LSP symbol kind to convert
+- `symbolKind`
+  (`  | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10   | 11   | 12   | 13   | 14   | 15   | 16   | 17   | 18   | 19   | 20   | 21   | 22   | 23   | 24   | 25   | 26`)
+  — the LSP symbol kind to convert
 
-#### Returns
+###### Returns
 
 The symbol kind as Monaco editor symbol kind (`monaco.languages.SymbolKind`).
 
@@ -1362,11 +1375,11 @@ The symbol kind as Monaco editor symbol kind (`monaco.languages.SymbolKind`).
 
 Convert an LSP symbol tag to a Monaco editor symbol tag.
 
-#### Parameters
+###### Parameters
 
-- `symbolTag` (`lsp.SymbolTag`) — the LSP symbol tag to convert
+- `symbolTag` (`1`) — the LSP symbol tag to convert
 
-#### Returns
+###### Returns
 
 The symbol tag as Monaco editor symbol tag (`monaco.languages.SymbolTag`).
 
@@ -1374,11 +1387,11 @@ The symbol tag as Monaco editor symbol tag (`monaco.languages.SymbolTag`).
 
 Convert an LSP text edit to a Monaco editor text edit.
 
-#### Parameters
+###### Parameters
 
 - `textEdit` (`lsp.TextEdit`) — the LSP text edit to convert
 
-#### Returns
+###### Returns
 
 The text edit as Monaco editor text edit (`monaco.languages.TextEdit`).
 
@@ -1386,11 +1399,11 @@ The text edit as Monaco editor text edit (`monaco.languages.TextEdit`).
 
 Convert an LSP workspace edit to a Monaco editor workspace edit.
 
-#### Parameters
+###### Parameters
 
 - `workspaceEdit` (`lsp.WorkspaceEdit`) — the LSP workspace edit to convert
 
-#### Returns
+###### Returns
 
 The workspace edit as Monaco editor workspace edit (`monaco.languages.WorkspaceEdit`).
 
@@ -1398,12 +1411,12 @@ The workspace edit as Monaco editor workspace edit (`monaco.languages.WorkspaceE
 
 Convert an LSP workspace file edit to a Monaco editor workspace file edit.
 
-#### Parameters
+###### Parameters
 
 - `workspaceFileEdit` (`lsp.CreateFile | lsp.DeleteFile | lsp.RenameFile`) — the LSP workspace file
   edit to convert
 
-#### Returns
+###### Returns
 
 The workspace file edit options Monaco editor workspace file edit options
 (`monaco.languages.IWorkspaceFileEdit`).
@@ -1412,12 +1425,12 @@ The workspace file edit options Monaco editor workspace file edit options
 
 Convert LSP workspace file edit options to Monaco editor workspace file edit options.
 
-#### Parameters
+###### Parameters
 
 - `options` (`lsp.CreateFileOptions & lsp.DeleteFileOptions & lsp.RenameFileOptions`) — the LSP
   workspace file edit options to convert
 
-#### Returns
+###### Returns
 
 The workspace file edit options Monaco editor workspace file edit options
 (`monaco.languages.WorkspaceFileEditOptions`).
